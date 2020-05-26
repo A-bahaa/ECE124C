@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="description" content="silicon valley show">
+         <meta name="keywords" content="silicon,valley,HBO">
+         <meta name="author" content="HBO">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Registration</title>
+      <style>
+body {
+  background-image: url('new.jpg');}
+    a:link{color:#000000;
+        text-decoration: none}
+    a:visited{color:#df2020;
+        text-decoration: none;}
+    a:hover{color: #808080;
+            text-decoration: none}
+    .ordinary {
+  font-size: 300%;
+  font-family:monospace;
+  background-color: yellow;
+
+}
+ .navbar {
+  overflow: hidden;
+  background-color: yellow;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+
+}
+
+.subnav .subnavbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+
+
+}
+
+.subnav-content a:hover {
+  background-color: white;
+  color: black;
+
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+      .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+   .fa-twitter {
+  background: #55ACEE;
+  color: white;
+          }
+
+     .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+   .fa-instagram {
+  background: #125688;
+  color: white;
+}
+@media screen and (min-width:0px) and (max-width:1100px){
+  div.info a ,b
+  { font-size:30px;  }
+  div.info{   width:100%;}
+  .ordinary{font-size:35px;}
+ p{font-size:20px;}
+.navbar{   width:100%;}
+
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+    <div class="navbar">
+   <a href="home.html">&#x1F4CDHOME!</a>
+
+  <div class="subnav">
+    <button class="subnavbtn">&#x2193 Cast</button>
+    <div class="subnav-content">
+      <a href="characters.html">head</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">&#x2193 Seasons</button>
+    <div class="subnav-content">
+      <a href="seasons.html">head</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">&#x2193 Ironic facts</button>
+    <div class="subnav-content">
+      <a href="ironic%20facts.html">head</a>
+    </div>
+  </div>
+      <div class="navbar">
+   <a href="registeriation.html">&#128209;Registeration</a>
+  </div>
+
+</div>
+
+    <h1 class="ordinary" style="text-align: center;" > HBO series library<sub style="color: red">"EMMY WINNER SILICON VALLEY"</sub> </h1>
+    <p class="ordinary">"Hellow this site aims to provide general information about HBO series in this one particularly we sneak a look at the wonderful tech series silicon valley so  if you want to join us plz fill this form you see below!" </p>
+
+        <form  onsubmit="return validation(this);" style="background: yellow; font-family: monospace; border-radius: 200px; font-size:200%">
+            <fieldset >
+
+
+
+               <p style="text-align: center">please fill this form!</p>
+
+                <label>First Name</label>
+                <input type="text" name="firstname" placeholder="First name"  maxlength="15"  required>
+
+                <label>Last name</label>
+                <input type="text" name="lastname" placeholder="Last name"  maxlength="15" required>
+
+                <label>Address</label>
+                <input type="text" placeholder="Address" required>
+
+                <label>E-mail</label>
+                <input type="email" name="e-mail" placeholder="E-mail"
+                       pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" required>
+
+
+                <label>Password</label>
+                <input type="password"  name="pass"  placeholder="Password"  pattern="^[A-Z]{1}[\w\S]{7}$" title="• the password must start with uppercase character.
+                   • the password must include 8 characters no more no less.
+                   • the password must include one digit at least.
+                   • the password must include one special character like - , _ , #, &, and *.
+                   • No white spaces allowed in the password" minlength="8" maxlength="8" required>
+
+              <label>Confirm Password</label>
+                <input type="password" name="c_pass" placeholder="Password confirmation"  pattern="^[A-Z]{1}[\w\S]{7}$" title="• the password must start with uppercase character.
+                   • the password must include 8 characters no more no less.
+                   • the password must include one digit at least.
+                   • the password must include one special character like - , _ , #, &, and *.
+                   • No white spaces allowed in the password" minlength="8" maxlength="8" required>
+
+                <label>Birth Day</label>
+                <input type="date"  required>
+
+
+                <label>Mobile Phone Number</label>
+
+                <input type="tel" name="phonenumb" placeholder="Enter your phone number"  pattern="[0]\d{10}"
+                    title="Number must be 11 digit : 01#########" maxlength="11" minlength="11" required>
+
+
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male"  required>male<br>
+                <input type="radio"  name="gender" value="female" >female
+                <hr>
+
+
+                <input type="submit" value="Sign up" style="display: block;
+              margin: auto; font-family: monospace;font-size: 100%; cursor: pointer;" >
+            </fieldset>
+
+        </form>
+
+    <script type="text/javascript">
+
+        function validation(form) {
+
+            if (form.pass.value != "" && form.pass.value == form.c_pass.value) {
+
+                re = /[0-9]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one number (0-9)!");
+                    form.pass.focus();
+                    return false;
+                }
+                re = /[^\d\sA-z]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one special character (_-=+%&!)!");
+                    form.pass.focus();
+                    return false;
+                }
+                re = /[a-z]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one lowercase letter (a-z)!");
+                    form.pass.focus();
+                    return false;
+                }
+                re = /[A-Z]/;
+                if (!re.test(form.pass.value)) {
+                    alert("Error: password must contain at least one uppercase letter (A-Z)!");
+                    form.pass.focus();
+                    return false;
+                }
+            } else {
+                alert("Error: Please check that you've entered and confirmed your password!");
+                form.pass.focus();
+                return false;
+            }
+
+            alert("Congrats you joined successfully!");
+            return true;
+        }
+    </script>
+
+    <!-- fooooooterrrrr-->
+
+    <div class="info" style="border: 0px solid black; background-color:yellow; color:black; text-align:left; font-family: cursive;font-size: 150%; opacity: 0.9;">
+    <p>FOLLOW THE VALLEY!</p>
+    
+    <a href="https://www.facebook.com/SiliconHBO/" target="_blank"; class="fa fa-facebook"></a><a href="https://twitter.com/SiliconHBO?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter" target="_blank";></a><a href="https://www.instagram.com/siliconhbo/?hl=en" class="fa fa-instagram" target="_blank";></a><a href="https://www.youtube.com/user/HBO" class="fa fa-youtube" target="_blank"></a>
+    <p>WANT MORE!</p>
+       
+    <a href="https://www.hbo.com/" target="_blank" style="text-decoration: underline;">HBO says hi!</a>
+</div>
+
+
+
+    </body>
+
+</html>

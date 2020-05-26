@@ -1,0 +1,604 @@
+
+    
+    <!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="description" content="silicon valley show">
+         <meta name="keywords" content="silicon,valley,HBO">
+         <meta name="author" content="HBO">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Seasons</title>
+      <style>
+body {
+  background-image: url('new.jpg');}
+    a:link{color:#000000;
+        text-decoration: none}
+    a:visited{color:#df2020;
+        text-decoration: none;}
+    a:hover{color: #808080;
+            text-decoration: none}
+    .ordinary {
+  font-size: 300%;
+  font-family:monospace;
+  background-color: yellow;
+}
+ .navbar {
+  overflow: hidden;
+  background-color: yellow;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+     
+}
+
+.subnav .subnavbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+    
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+     
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+   
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+ 
+    
+} 
+
+.subnav-content a:hover {
+  background-color: white;
+  color: black;
+    
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+ .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+ 
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+} 
+          
+   .fa-twitter {
+  background: #55ACEE;
+  color: white;
+          }
+          
+     .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+          
+   .fa-instagram {
+  background: #125688;
+  color: white;
+} 
+   #more1 {display: none;}
+    #more2 {display: none;}       
+    #more3 {display: none;}       
+     #more4 {display: none;}      
+     #more5 {display: none;}
+      #more6 {display: none;}     
+        
+          
+          #myBtn1{
+              
+              color: black;
+              background-color: yellow;
+              display: block;
+              margin: auto;
+              font-size:300%;
+              font-family: monospace;
+              opacity: 0.9;
+          }
+           #myBtn2{
+              
+              color: black;
+              background-color: yellow;
+              display: block;
+              margin: auto;
+              font-size:300%;
+              font-family: monospace;
+              opacity: 0.9;
+          }
+           #myBtn3{
+              
+              color: black;
+              background-color: yellow;
+              display: block;
+              margin: auto;
+              font-size:300%;
+              font-family: monospace;
+              opacity: 0.9;
+          }
+           #myBtn4{
+              
+              color: black;
+              background-color: yellow;
+              display: block;
+              margin: auto;
+              font-size:300%;
+              font-family: monospace;
+              opacity: 0.9;
+          }
+           #myBtn5{
+              
+              color: black;
+              background-color: yellow;
+              display: block;
+              margin: auto;
+              font-size:300%;
+              font-family: monospace;
+              opacity: 0.9;
+          }
+           #myBtn6{
+              
+              color: black;
+              background-color: yellow;
+              display: block;
+              margin: auto;
+              font-size:300%;
+              font-family: monospace;
+              opacity: 0.9;
+          }
+             
+          
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+    
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 2s ease;
+  
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: yellow;
+}
+
+/* Caption text */
+.text {
+  color: yellow;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: yellow;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #b8b814;
+}
+
+
+  
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+ 
+    @media screen and (min-width:0) and (max-width:1100px) {
+    
+    div.info a ,b
+  { font-size:30px;  }
+  div.info{   width:100%;}
+  .ordinary{font-size:35px;}
+ p{font-size:20px;}
+.navbar{   width:100%;}
+ .demo{   width:100%;}
+        
+}      
+          
+          
+          
+          
+          
+          
+          
+</style>
+        
+        
+        
+    </head>
+<body>
+
+    
+<div class="navbar">
+  <a href="home.html">&#x1F4CDHOME!</a>
+   <div class="subnav">
+    <button class="subnavbtn">&#x2193 Cast</button>
+    <div class="subnav-content">
+      <a href="characters.html">head</a>
+      </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">&#8650 Seasons</button>
+    <div class="subnav-content">
+      <p><a href="seasons.html">&#x21BA head</a></p>
+      <p><a href="#1">1</a></p>
+      <p><a href="#2">2</a></p>
+      <p><a href="#3">3</a></p>
+      <p><a href="#4">4</a></p>
+      <p><a href="#5">5</a></p>
+      <p><a href="#6">6</a></p>
+      <p><a href="#7"> &#127924;Images</a></p> 
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">&#x2193 Ironic facts</button>
+    <div class="subnav-content">
+      <a href="ironic%20facts.html">head</a>
+       </div>
+  </div>
+     <div class="navbar">
+   <a href="registeriation.html">&#128209;Registeration</a>
+  </div>
+  
+</div>
+   
+<br> <br> <br>
+    
+    <h1 id="1" style="text-align: center;"><mark>Season 1</mark></h1>
+    <p class="ordinary"><iframe width="468" height="350" class="demo" src="https://www.youtube.com/embed/Vm4tx1O9GAc"                           style="float:right;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"Richard Hendricks creates an app known as Pied Piper which contains a revolutionary data compression algorithm. Peter Gregory acquires a stake in Pied Piper, and Richard hires the residents of Erlich Bachman's business incubator including Bertram Gilfoyle and Dinesh Chugtai along with Jared Dunn, who defected from another tech company called Hooli. Meanwhile, Nelson "Big Head" Bighetti chooses to accept a substantial promotion at Hooli instead, despite his lack of merit for the job.<span id="dots1">...</span> <span id="more1"> Gavin Belson instructs his Hooli employees to reverse engineer Pied Piper's algorithm and develops a copycat product called Nucleus. Both companies are scheduled to present at TechCrunch Disrupt. Pied Piper rushes to produce a feature-rich cloud storage platform based on their compression technology. At the TechCrunch event, Belson presents Nucleus, which is integrated with all of Hooli's services and has compression performance equal to Pied Piper. However, Richard has a new idea and spends the entire night coding. The next morning, Richard makes Pied Piper's final presentation and demonstrates a product that strongly outperforms Nucleus and he is mobbed by eager investors."</span></p>
+    <button onclick="myFunction1()" id="myBtn1">Read more</button>
+    <script>
+        
+   function myFunction1() {
+  var dots = document.getElementById("dots1");
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+    
+    
+    
+    
+     
+    <br><br><hr>
+     
+    
+    
+    <h1 id="2" style="text-align: center;"><mark>Season 2</mark></h1>
+    <p class="ordinary"><iframe width="468" height="350" class="demo" src="https://www.youtube.com/embed/qCj9Lm4fRQY" style="float:right;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"In the immediate aftermath of their TechCrunch Disrupt victory, multiple venture capital firms offer to finance Pied Piper's Series A round. Peter Gregory has died and is replaced by Laurie Bream to run Raviga Capital. Richard finds out that Hooli is suing Pied Piper for copyright infringement, claiming that Richard developed Pied Piper's compression algorithm on Hooli time using company equipment.<span id="dots2">...</span> <span id="more2"> As a result, Raviga and all the other VC firms retract their offer. Richard turns down Hooli's buyout and accepts funding from Russ Hanneman, though Richard quickly begins questioning his decision after learning about Hanneman's mercurial reputation and his excessive interference in day-to-day operation.Belson promotes Big Head to Hooli [xyz], to make people think he created the compression algorithm and Richard stole it to create Pied Piper. Belson agrees to drop the lawsuit in favor of binding arbitration to prevent the press from finding out about how bad Nucleus is. Due to a clause in Richard's Hooli contract, the lawsuit is ruled in Pied Piper's favor. Raviga buys out Hanneman's stake in Pied Piper, securing three of Pied Piper's five board seats. However, they decide to remove Richard from the CEO position due to previous incidents."</span></p>
+     <button onclick="myFunction2()" id="myBtn2">Read more</button>
+    <script>
+        
+   function myFunction2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+    
+    <br><br><hr>
+    
+    
+    <h1 id="3" style="text-align: center;"><mark>Season 3</mark></h1>
+    <p class="ordinary"><iframe width="468" height="350" class="demo" src="https://www.youtube.com/embed/0kMjn2HxjMM" style="float:right;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"After a failed stint with Jack Barker as CEO of Pied Piper, Richard eventually regains his CEO position. Due to Jack wasting all their money on offices and useless marketing, a cash strapped Richard hires contract engineers from around the world to help construct their application platform. Big Head receives a $20 million severance package from Hooli in exchange for non-disclosure and non-disparagement agreements. Big Head uses his money to set up his own incubator and Erlich partners with him.<span id="dots3">...</span> <span id="more3"> However, because of their spending habits, they declare bankruptcy, and Erlich is forced to sell his stake in Pied Piper to repay the debts. Gavin Belson hires Jack Barker as the new head of development at Hooli.After release, their platform is positively reviewed by members of the industry. However, only a small fraction of the people installing the platform remain as daily active users due to its complex interface design. Meanwhile, Jared secretly employs a click farm in Bangladesh to artificially inflate usage statistics. An anxious Richard reveals the source of the uptick at a Series B funding signing meeting, leading to the deal being scrapped. Laurie no longer wishes for Raviga to be associated with Pied Piper and moves to sell majority control to any investor. Erlich and Big Head are able to buy control of the company after an unexpected windfall from the sale of a blog they bought. Pied Piper now prepares to pivot again, this time to become a video chat company, based on the sudden popularity of Dinesh's video chat application which he included on the platform."</span></p>
+    <button onclick="myFunction3()" id="myBtn3">Read more</button>
+    <script>
+        
+   function myFunction3() {
+  var dots = document.getElementById("dots3");
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+    
+    
+    
+    <br><br><hr>
+    
+    
+    
+    <h1 id="4" style="text-align: center;"><mark>Season 4</mark></h1>
+    <p class="ordinary"><iframe width="468" height="350" class="demo" src="https://www.youtube.com/embed/rvNwgG7JM4Q" style="float:right;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"Richard steps down as CEO of Pied Piper, and instead begins working on a new project: a decentralized, peer-to-peer internet, that would be powered by a network of cell phones without any firewalls, viruses, or government regulations. Gavin Belson is removed as CEO of Hooli after an incident involving COPPA violations from when he seized PiperChat. Jack Barker takes his place as CEO. Gavin temporarily works with Richard, until he has an existential crisis and leaves Palo Alto for Tibet.Laurie and Monica form their own VC company, Bream/Hall.<span id="dots4">...</span> <span id="more4"> Big Head becomes a lecturer at Stanford University's Department of Computer Science. Erlich gets into business with Keenan Feldspar, whose VR headset is the Valley's latest sensation. However, Erlich is left out of a signing deal and is abandoned by Feldspar, leaving Erlich disillusioned. Erlich then goes to Tibet to meet with Gavin. While Gavin eventually returns home, Erlich stays.Richard gets into business with FGI, an insurance company, who uses Pied Piper for their data storage needs. After a crisis involving FGI's data storage, the team discovers that the decentralized internet is a working concept after the data from their Pied Piper server had backed itself up to Jian-Yang's smart refrigerator, as Gilfoyle used some of the Pied Piper code when he was trying to hack it, which in turn connected itself to a network of other refrigerators like it and distributing the data. Gavin ousts Jack from Hooli and regains his position as CEO. He offers a very generous acquisition deal to Richard, who turns it down and decides to be funded by Bream/Hall."</span></p>
+    <button onclick="myFunction4()" id="myBtn4">Read more</button>
+    
+    <script>
+        
+   function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+    
+    <br><br><hr>
+    
+    
+    <h1 id="5" style="text-align: center;"><mark>Season 5</mark></h1>
+    <p class="ordinary"><iframe width="468" height="350" class="demo" src="https://www.youtube.com/embed/H7pYslGR6GU" style="float:right;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"In the fifth season, the Pied Piper team gets new offices and hires a large team of coders to help work on Richard's new internet. Meanwhile, Jian-Yang manages to convince a judge that Erlich is dead so that he can inherit Erlich's estate, including the idea incubator and the 10% share of Pied Piper. Richard promotes Jared to be the new chief operating officer for Pied Piper, and Jian-Yang goes to China to build a knock-off version of Pied Piper.Bream/Hall forces Richard to team up with Eklow, an AI team, and Pied Piper puts together a group of developers.<span id="dots5">...</span> <span id="more5"> When Eklow's CEO almost destroys Pied Piper's credibility, Richard becomes fed up with Laurie and considers using Gilfoyle's idea to create a cryptocurrency for Pied Piper as a way to secure an independent source of funding. After initially opposing the idea, Monica realizes that Laurie plans to make Richard sell ads for his decentralized internet, and warns him. In gratitude, Richard offers her the newly vacated role of CFO at Pied Piper, and she accepts, finally cutting ties with Laurie.After unimpressive results from their cryptocurrency, Pied Piper is distraught when Laurie teams up with a wealthy Chinese manufacturer, Yao, who had been working with Belson to steal Jian-Yang's Pied Piper patent. Yao and Laurie add users to Pied Piper's network via a large number of newly manufactured phones, and prepare for a 51% attack against Pied Piper's cryptocurrency. Richard asks Belson to put their software onto Hooli's Signature Box 3 network in order to stop Yao and Laurie, and Belson does so, but betrays Richard by teaming up with Laurie and Yao to delete Pied Piper. At the last minute, Pied Piper recruits Colin, another developer betrayed by Laurie, to run his popular video game Gates of Galloo on the Pied Piper network, adding users and allowing Pied Piper to maintain control of enough of the network to block Yao's and Hooli's machines from accessing it. Meanwhile, due to the losses incurred in launching the unsuccessful Signature Box 3, Hooli's board of directors announce plans that force Belson to sell the company to Amazon and Jeff Bezos. PiedPiperCoin gains traction, and the season ends with the Pied Piper team moving into a huge new office space."</span></p>
+    <button onclick="myFunction5()" id="myBtn5">Read more</button>
+     
+    <script>
+        
+   function myFunction5() {
+  var dots = document.getElementById("dots5");
+  var moreText = document.getElementById("more5");
+  var btnText = document.getElementById("myBtn5");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+    
+    <br><br><hr>
+    
+    
+    <h1 id="6" style="text-align: center;"><mark>Season 6</mark></h1>
+    <p class="ordinary"><iframe width="468" height="350" class="demo" src="https://www.youtube.com/embed/NKGaVHQI_9E" style="float:right;"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"Pied Piper has become a large company of 500 employees with Richard speaking before Congress on his ideology of a new internet that doesn't collect user data. He is shocked to learn that Colin's online game Gates of Galloo, part of the Pied Piper family, has been collecting user data the entire time. Colin refuses to stop, but Pied Piper depends on his game's revenue, so Richard seeks new investment in order to cut Colin loose. He finds shady Chilean billionaire Maximo Reyes, who offers Richard $1 billion.<span id="dots6">...</span> <span id="more6"> When Richard turns him down, Maximo begins staging a hostile takeover of Pied Piper. Meanwhile, Richard's right-hand man Jared has left Pied Piper to seek a new up-and-coming talent in need of his support. Hooli, once a tech giant headed by Richard's rival Gavin Belson, downsizes drastically after most of the company is sold to Amazon. Pied Piper purchases what remains of Hooli, including its subsidiary FoxHole. CFIUS judges foreign ownership of FoxHole to be a threat to national security, and Maximo is forced to sell all of his shares of Pied Piper. Gavin, free from his Hooli position, launches a new campaign for "Tethics" (tech ethics) which leads to an investigation that would tie up Pied Piper's business dealings. Richard is able to maneuver out of this with the help of Russ Hanneman. However, Pied Piper must now help Russ with his music festival RussFest. At RussFest, Richard suspects Laurie may be sabotaging their software as it is failing. It turns out that neither Yao Net USA nor Pied Piper scale. Instead of quitting, Richard integrates Gilfoyle's AI (with some edits from Dinesh) into PiperNet and it works better than anyone could have expected, allowing Pied Piper to close a deal with AT&T. However, the team soon realizes that in this effort to maximize compression and efficiency, PiperNet's AI has found a way to bypass all encryption, causing a potential global threat if launched. Thus PiedPiper is forced to intentionally fail to save the world from their own creation. They are successful in crashing the launch. There is a 10 year flash forward to see where everyone is, ending with Richard misplacing a flash drive with the potential world security-threatening code on it."</span></p>
+    <button onclick="myFunction6()" id="myBtn6">Read more</button>
+     <script>
+        
+   function myFunction6() {
+  var dots = document.getElementById("dots6");
+  var moreText = document.getElementById("more6");
+  var btnText = document.getElementById("myBtn6");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+    
+    
+    <br><br><hr>
+    
+     <h1 id="7" style="text-align: center;"><mark>Images</mark></h1>
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="pic1.jpg" style="width:100%">
+  <div class="text">they're cooking something</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="pic2.jpg" style="width:100%">
+  <div class="text">the whole gang in trouble</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="pic3.jpg" style="width:100%">
+  <div class="text">Richard is so disapointed</div>
+</div>
+    <div class="mySlides fade">
+  <div class="numbertext">4/ 4</div>
+  <img src="pic4.jpg" style="width:100%">
+  <div class="text"> at the Emmys</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>  
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    <br><br><hr>
+
+    
+    
+   <!-- fooooooterrrrr-->
+
+    <div class="info" style="border: 0px solid black; background-color:yellow; color:black; text-align:left; font-family: cursive;font-size: 150%; opacity: 0.9;">
+    <p>FOLLOW THE VALLEY!</p>
+    
+    <a href="https://www.facebook.com/SiliconHBO/" target="_blank"; class="fa fa-facebook"></a><a href="https://twitter.com/SiliconHBO?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter" target="_blank";></a><a href="https://www.instagram.com/siliconhbo/?hl=en" class="fa fa-instagram" target="_blank";></a><a href="https://www.youtube.com/user/HBO" class="fa fa-youtube" target="_blank"></a>
+    <p>WANT MORE!</p>
+       
+    <a href="https://www.hbo.com/" target="_blank" style="text-decoration: underline;">HBO says hi!</a>
+</div>
+
+
+    
+    
+    
+ 
+    
+</body>
+    
+    
+   
+    
+    
+ 
+    
+    
+<!-- احمد بهاء محمد غنيم ...سكشن 1....رقم 5 -->
+</html>
+    
